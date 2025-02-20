@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\job; 
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -26,4 +27,10 @@ Route::get('/contact', function () {
 
 Route::get('/about', function () {
     return view('about');
+});
+
+Route::Get('/jobs', function(){
+    return view('jobs', [
+        'jobs'=> Job::all(), 
+        'jobs2' => Job::GetAll()]);
 });
