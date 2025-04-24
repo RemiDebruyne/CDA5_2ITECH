@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Students</h1>
+    <ul>
+        <li th:each="student : ${students}">
+            <span th:text="${student.getFirstName()}"/>
+            <span th:text="${student.getLastName()}"/>
+            <a th:href="@{'/students/' + ${student.getId()}}"> Details </a>
+            <a th:href="@{'/update/' + ${student.getId()}}"> Update </a>
+            <a th:href="@{'/delete/' + ${student.getId()}}">Delete</a>
+        </li>
+    </ul>
+
+    <form th:action="@{/search}" th:object="${student}" method="post">
+        <input name="lastName" id="lastName" th:field="*{lastName}">
+        <button>Search</button>
+    </form>
+
+    <a th:href="@{/form}">Add</a>
+
+</body>
+</html>
