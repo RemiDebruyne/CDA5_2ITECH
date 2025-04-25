@@ -6,5 +6,12 @@
 </head>
 <body>
   <h1>Home</h1>
+  <p th:if="${isLoginFail}">Login failed, please try again</p>
+  <p th:text="${user?.getUsername()} ?: 'You are not logged in'"></p>
+
+  <a th:if="${user != null}" th:href="@{'/profile/' + ${user.getId()}}">Profile</a>
+
+  <a th:unless="${user != null}" th:href="@{'/login'}">Log in</a>
+<a th:if="${user != null}" th:href="@{/logout}">Log out</a>
 </body>
 </html>
