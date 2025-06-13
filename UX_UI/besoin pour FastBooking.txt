@@ -1,0 +1,15 @@
+- Page d'un prestataire / résa
+	- Prendre un ou plusieurs rdv
+	- Annuler un rdv
+	- Voir les plages horaires disponibles / indisponibles
+- Page d'accueil :
+	- Liste des services
+	- Populaire autour de vous
+	- Système de recherche
+	- Filtre
+	- Tri
+- Couleur importante : bleu
+- Compte client
+	- Liste des résa
+	- Historique des résa
+	- Pouvoir gérer les résa
